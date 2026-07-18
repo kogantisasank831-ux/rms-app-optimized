@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- FIXED offer letter template v1 (INV-10). System fills variables only; content is not editable at runtime. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @page { size: A4; margin: 20mm 22mm; }
+    body { font-family: "Helvetica Neue", Arial, sans-serif; color: #1a1a1a; font-size: 10.5pt; line-height: 1.5; }
+    .brand { text-align: center; margin-bottom: 6px; }
+    .brand .logo { font-size: 15pt; font-weight: 800; letter-spacing: 3px; color: #2b7a2b; }
+    .brand .logo span { color: #1a5fb4; }
+    .brand .rule { border-bottom: 1px solid #cfd6e0; margin-top: 6px; }
+    .confidential { text-align: center; font-weight: 700; text-decoration: underline; letter-spacing: .5px; margin: 22px 0 26px; }
+    .date { margin-bottom: 16px; }
+    .to { font-weight: 700; margin-bottom: 18px; }
+    p { margin: 0 0 13px; }
+    .terms { margin: 4px 0 16px; }
+    .terms .row { display: flex; }
+    .terms .k { font-weight: 700; width: 42%; }
+    .terms .sep { width: 12px; }
+    strong.hl { font-weight: 700; }
+    .sign { margin-top: 34px; }
+    .sign .name { font-weight: 700; margin-top: 30px; }
+    .sign .title { font-weight: 700; }
+    .accept { margin-top: 30px; }
+    .accept .line { display: inline-block; border-bottom: 1px solid #333; min-width: 190px; }
+    .accept .sig { margin-top: 22px; }
+    .footer { margin-top: 40px; text-align: center; font-size: 7.5pt; color: #6b7280; border-top: 1px solid #e2e6ec; padding-top: 8px; }
+    .footer .co { font-weight: 700; color: #374151; }
+    .ref { text-align: center; font-size: 7pt; color: #9aa4b2; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <div class="logo">TCG <span>DIGITAL</span></div>
+    <div class="rule"></div>
+  </div>
+
+  <div class="confidential">STRICTLY CONFIDENTIAL</div>
+
+  <div class="date">{{ issue_date }}</div>
+  <div class="to">Mr./Ms. {{ candidate_name }}</div>
+
+  <p>Dear {{ first_name }},</p>
+
+  <p>
+    This is in reference to your application and subsequent interviews in our organization. We are
+    pleased to extend an offer of employment based on the following terms as discussed:
+  </p>
+
+  <div class="terms">
+    <div class="row"><span class="k">Designation</span><span class="sep">:</span><span>{{ designation }}</span></div>
+    <div class="row"><span class="k">Monthly Gross</span><span class="sep">:</span><span>{{ monthly_gross }}</span></div>
+    <div class="row"><span class="k">Total Cost to Company</span><span class="sep">:</span><span>{{ ctc_annual }}</span></div>
+  </div>
+
+  <p>
+    Please confirm your acceptance on or before <strong class="hl">{{ valid_until }}</strong> after which
+    the offer will automatically stand revoked.
+  </p>
+
+  <p>
+    We look forward to your joining us on or before <strong class="hl">{{ joining_date }}</strong>. Please
+    sign the duplicate copy of this letter as a token of your acceptance of the offer.
+  </p>
+
+  <p>
+    Your base location will be <strong class="hl">{{ work_location }}</strong>. All the necessary details
+    will be provided before the date of joining.
+  </p>
+
+  <p>
+    On your joining, we will issue an appointment letter with details of the terms and conditions of
+    employment. Your employment will be subject to Employment Verification Check to be conducted by our
+    empaneled Third Party Vendor and you obtaining a clear discharge from your current employer.
+  </p>
+
+  <p>With best wishes,</p>
+  <p>Yours sincerely,</p>
+
+  <div class="sign">
+    <div class="name">Jagat Mohan Sarkar</div>
+    <div class="title">Head Human Capital, Development &amp; Transformation</div>
+  </div>
+
+  <div class="accept">
+    <p>I accept the offer and will join TCG Digital Solutions Pvt. Ltd. on or before <span class="line"></span>.</p>
+    <div class="sig">SIGNATURE <span class="line"></span>&nbsp;&nbsp;&nbsp;DATE <span class="line"></span></div>
+  </div>
+
+  <div class="footer">
+    <div class="co">TCG Digital Solutions Private Limited</div>
+    <div>(Formerly known as SkyTECH Solutions Private Limited)</div>
+    <div>Registered Office: BIPPL, Building-Omega, 16th Floor, Block-EP &amp; GP Sector-V, Salt Lake Electronics Complex, Kolkata 700091</div>
+    <div>Telephone No.: +91-33 4051-7000 / 7300 | Fax No.: +91-33-4051-7297 | Email: info@tcg-digital.com</div>
+    <div class="ref">Offer Reference: {{ offer_code }} · Issued by {{ hr_name }}</div>
+  </div>
+</body>
+</html>

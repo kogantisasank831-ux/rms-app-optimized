@@ -1,0 +1,24 @@
+# TCG RMS backend deps (versions pinned at scaffold time T-101)
+fastapi
+uvicorn[standard]
+sqlalchemy>=2.0
+alembic
+asyncpg
+psycopg[binary]   # sync driver for Alembic migrations (app runtime uses asyncpg)
+pydantic>=2
+pydantic-settings
+python-jose[cryptography]
+bcrypt
+python-multipart
+minio
+pillow            # profile-photo resize/compress (WebP icon + profile renditions)
+anthropic
+jinja2
+weasyprint
+pypdf
+python-docx
+openpyxl
+structlog
+pytest
+pytest-asyncio
+httpx

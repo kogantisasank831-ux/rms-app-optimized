@@ -1,0 +1,25 @@
+# Local secrets and credentials — never commit.
+.env
+.env.*
+!.env.example
+T_07.xlsx
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Frontend
+node_modules/
+node_modules.uploaded/
+dist/
+
+# Generated / design documents
+*.pdf
+*.docx
+
+# Editor / OS noise
+.DS_Store
+.vscode/
+.idea/
